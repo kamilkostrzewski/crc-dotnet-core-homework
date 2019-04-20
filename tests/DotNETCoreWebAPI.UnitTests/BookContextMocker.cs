@@ -10,7 +10,7 @@ namespace DotNETCoreWebAPI.UnitTests
 {
     public static class BookContextMocker
     {
-        public static IBookRepository<Book> GetInMemoryRepository(string dbName)
+        public static IBookRepository<Book> GetInMemoryBookRepository(string dbName)
         {
             var options = new DbContextOptionsBuilder<BookContext>()
                 .UseInMemoryDatabase(databaseName: dbName)
