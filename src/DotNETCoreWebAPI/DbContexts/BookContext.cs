@@ -7,6 +7,11 @@ namespace DotNETCoreWebAPI.DbContexts
     {
         public BookContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Book> Measurements { get; set; }
+        public DbSet<Book> Books { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Filename=./Homework.db");
+        }
     }
 }
