@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotNETCoreWebAPI.Migrations
 {
     [DbContext(typeof(BookContext))]
-    [Migration("20190420190014_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20190420193823_InitialMigrationRepaired")]
+    partial class InitialMigrationRepaired
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace DotNETCoreWebAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Measurements");
+                    b.ToTable("Books");
                 });
 #pragma warning restore 612, 618
         }

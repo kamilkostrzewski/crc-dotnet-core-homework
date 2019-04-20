@@ -33,7 +33,7 @@ namespace DotNETCoreWebAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Measurements");
+                    b.ToTable("Books");
                 });
 #pragma warning restore 612, 618
         }
