@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DotNETCoreWebAPI.Repositories
 {
-    public class BookRepository
+    public class BookRepository: IBookRepository<Book>
     {
         private readonly BookContext _dbContext;
 

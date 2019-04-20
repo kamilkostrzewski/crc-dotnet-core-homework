@@ -1,4 +1,6 @@
 ﻿using DotNETCoreWebAPI.DbContexts;
+using DotNETCoreWebAPI.Models;
+using DotNETCoreWebAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -23,6 +25,7 @@ namespace DotNETCoreWebAPI
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<BookContext>(options => 
                 options.UseSqlite(Configuration.GetConnectionString("HomeworkDb")));
+            services.AddScoped<IBookRepository<Book>, BookRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
